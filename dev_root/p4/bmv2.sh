@@ -1,11 +1,11 @@
 #p4 compile
-git clone --recursive https://github.com/p4lang/p4c.git 
+git clone --recursive https://kgithub.com/p4lang/p4c.git 
 
 #dependency
 sudo apt-get install -y cmake g++ git automake libtool libgc-dev bison flex libfl-dev libgmp-dev libboost-dev libboost-iostreams-dev libboost-graph-dev llvm pkg-config python python-scapy python-ipaddr python-ply tcpdump doxygen graphviz texlive-full
 
 #protobuf
-git clone https://github.com/protocolbuffers/protobuf.git
+git clone https://kgithub.com/protocolbuffers/protobuf.git
 cd protobuf
 git checkout v3.2.0
 git submodule update --init --recursive
@@ -27,7 +27,7 @@ sudo make install
 
 #software switch 
 cd ..
-git clone https://github.com/p4lang/behavioral-model.git
+git clone https://kgithub.com/p4lang/behavioral-model.git
 
 cd behavioral-model
 ./install_deps.sh
