@@ -81,7 +81,7 @@ control WorkersCounter(
             read_count_workers_action;
             @defaultonly NoAction;
         }
-        const entries = {
+        const entmapries = {
             // Special case for single-worker jobs
             // if map_result is all 0's and type is CONSUME0, this is the first time we've seen this packet
             (1, 0, packet_type_t.CONSUME0) : single_worker_count_action();
