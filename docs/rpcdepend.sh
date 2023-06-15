@@ -18,6 +18,7 @@ rm -r protoc-gen-validate \
 rm -r re2 \
 rm -r xds \
 rm -r zlib \
+git submodule add https://kgithub.com/abseil/abseil-cpp.git third_party/abseil-cpp
 git submodule add https://kgithub.com/google/benchmark  third_party/benchmark
 git submodule add https://kgithub.com/google/bloaty.git third_party/bloaty
 git submodule add https://kgithub.com/google/boringssl.git third_party/boringssl-with-bazel
