@@ -136,7 +136,8 @@ control Ingress(
             // If it's a SwitchML packet, process it
             if ((packet_type_underlying_t) ig_md.switchml_md.packet_type >=
                 (packet_type_underlying_t) packet_type_t.CONSUME0) { // all consume or harvest types
-
+                // find new destination 
+                // construct new bitmap: new packets triggers originally, new destination (worker) also triggers new bitmap
                 // Update/read exponents if this is a packet with exponents
                 if (ig_md.switchml_md.last_packet) {
                     exponents.apply(

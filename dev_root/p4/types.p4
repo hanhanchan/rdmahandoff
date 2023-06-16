@@ -201,6 +201,7 @@ header switchml_md_h {
     worker_bitmap_t worker_bitmap_before;
 
     // TSI used to fill in switchML header (or RoCE address later)
+    // job_number means transfer job in switch 
     bit<32> tsi;
     bit<8> job_number;
 
@@ -216,7 +217,8 @@ header switchml_md_h {
     exponent_t e0;
     exponent_t e1;
 
-    // Message ID
+    // Message ID // transaction ID 
+    //it's ok the psn of different transaction is not consistent
     msg_id_t msg_id;
 
     // First/last packet of a message
@@ -237,6 +239,8 @@ struct ingress_metadata_t {
     switchml_rdma_md_h switchml_rdma_md;
 
     // This bitmap has one bit set for the current packet's worker
+    // ? pair bit (request, response)
+    // new struct needed
     worker_bitmap_t worker_bitmap;
 
     // Checksum stuff
